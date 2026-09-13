@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>رسالة خاصة لشيهان ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        }
+
+        .card {
+            width: 85%;
+            max-width: 500px;
+            background: white;
+            padding: 35px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #4169e1;
+        }
+
+        input {
+            width: 80%;
+            padding: 15px;
+            border: 2px solid #74b9ff;
+            border-radius: 25px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            background: #4169e1;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 25px;
+            font-size: 20px;
+            color: #4169e1;
+            font-weight: bold;
+            line-height: 1.8;
+        }
+
+        .heart {
+            position: fixed;
+            font-size: 30px;
+            animation: float 6s linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 70%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(4) {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            from {
+                bottom: -50px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 110%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heart">❤️</div>
+    <div class="heart">💙</div>
+    <div class="heart">🤝</div>
+    <div class="heart">❤️</div>
+
+    <div class="card">
+
+        <h1>رسالة خاصة ❤️</h1>
+
+        <p>اكتب اسمك خويا 👇</p>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="اكتب اسمك هنا"
+        >
+
+        <br>
+
+        <button onclick="checkName()">
+            اضغط هنا ❤️
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+    <script>
+
+        function checkName() {
+
+            let name = document.getElementById("name").value.trim();
+
+            if (name === "شيهان") {
+
+                document.getElementById("message").innerHTML =
+                "شيهان خويا ❤️<br><br>" +
+                "الصحبة الصح تبان في المواقف، ونتا واحد من الناس اللي نقدرهم بزاف ونفتخر بصداقتهم. 🤝❤️<br><br>" +
+                "نتا خويا وصاحبي بصح نكمك 😂😂😂😂❤️";
+
+            } else {
+
+                document.getElementById("message").innerHTML =
+                "هممم 🤔 اكتب اسمك الصحيح خويا ❤️";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
